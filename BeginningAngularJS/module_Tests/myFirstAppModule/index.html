@@ -4,10 +4,11 @@
 		<meta charset="UTF-8">    
 		<title>Listing 4-10</title>    
 		<script src="js/angular.min.js"></script>    
-		<script src="js/myFirstAppModule.js"></script> 
+		<script src="js/myFirstAppModule.js"></script>
+		 
 
 	</head> 
 	<body ng-controller="MyFilterDemoCtrl">
-	<p>Plan type: {{data.plan}}</p> 
+	<p>Plan type: {{data.plan | stripDashes}}</p> 
 	</body> 
 </html> 

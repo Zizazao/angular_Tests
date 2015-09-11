@@ -8,7 +8,7 @@ myFirstAppModule.controller('MyFilterDemoCtrl', function ($scope) {
 		dateJoined: new Date(2010, 2, 23),            
 		consumption: 123.659855,            
 		plan: 'super-basic-plan'        
-		}; 
+		};
         $scope.data = someData;        
 
 	} 
