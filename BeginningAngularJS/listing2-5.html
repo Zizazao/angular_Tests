@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html ng-app> 
+	<head>  
+		<title>Listing 2-5</title>  
+		<script src="js/angular.min.js"></script> 
+	</head> 
+	<body>  
+		<button ng-click="count = count +1" ng-init="count 0"> <!-- el valor de la variable count se establece en ng-init y la función se 															establece en ng-clik, que se activará cuando se pulse el botón -->
+			Increment
+		</button>
+
+		<p>Count: {{count}} </p>
+
+		<button ng-click="countPairs = countPairs +2" ng-init="countPairs 0">
+			Plus 2
+		</button>
+
+		<p>Result: {{countPairs}} </p>
+	</body> 
+</html> 

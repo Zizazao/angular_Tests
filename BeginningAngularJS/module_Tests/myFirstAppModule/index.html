@@ -1,0 +1,27 @@
+<!DOCTYPE html > 
+<html ng-app="myFirstAppModule"> 
+	<head lang="en">    
+		<meta charset="UTF-8">    
+		<title>Listing 4-10</title>    
+		<script src="js/angular.min.js"></script>    
+		<script src="js/myFirstAppModule.js"></script> 
+		<script>
+
+			function myFilterDemotCtrl($scope){
+				        var someData = {            
+				        	firstName: 'JENNA',            
+				        	surname: 'GRANT',            
+				        	dateJoined: new Date(2010, 2, 23),            
+				        	consumption: 123.659855,            
+				        	plan: 'super-basic-plan'        
+				        }; 
+        $scope.data = someData; 
+    	}
+
+			
+		</script>
+	</head> 
+	<body ng-controller="MyFilterDemoCtrl">
+	<p>Plan type: {{someData.plan}}</p> 
+	</body> 
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html ng-app> 
+	<head>  
+		<title>Listing 4-2 - 4-4</title>  
+		<script src="js/angular.min.js"></script> 
+
+		<script>
+
+			function myFilterDemotCtrl($scope){
+				        var someData = {            
+				        	firstName: 'JENNA',            
+				        	surname: 'GRANT',            
+				        	dateJoined: new Date(2010, 2, 23),            
+				        	consumption: 123.659855,            
+				        	plan: 'super-basic-plan'        
+				        }; 
+        $scope.data = someData; 
+    	}
+
+			
+		</script>
+	</head> 
+	<body ng-controller="myFilterDemotCtrl">
+		<p>
+			<strong>Name: {{data.firstName | lowercase}} </strong><br>
+			<strong>Surname: {{data.surname | lowercase}} </strong><br>
+			<strong>Date: {{data.dateJoined | date}} </strong><br>
+			<strong>Date: {{data.dateJoined | date: 'shortDate'}} </strong><br>
+			<strong>Consumption: {{data.consumption}} </strong><br>
+			<strong>Consumption: {{data.consumption | number: 2}} </strong> <!-- 2 decimales -->
+
+		</p>
+		
+
+	</body> 
+</html> 

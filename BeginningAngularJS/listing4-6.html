@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html ng-app ng-controller="myFilterDemotCtrl"> 
+	<head>  
+		<title>Listing 4-6</title>  
+		<script src="js/angular.min.js"></script> 
+
+		<script>
+
+			function myFilterDemotCtrl($scope){
+				        var someData = {            
+				        	firstName: 'JENNA',            
+				        	surname: 'GRANT',            
+				        	dateJoined: new Date(2010, 2, 23),            
+				        	consumption: 123.659855,            
+				        	plan: 'super-basic-plan',
+				        	monthlyUsage: [123.659855,                
+				        	89.645222,                
+				        	97.235644,                
+				        	129.555555,                
+				        	188.699855,                
+				        	65.652545,                
+				        	123.659855,                
+				        	89.645222,                
+				        	97.235644,                
+				        	129.555555,                
+				        	188.699855,                
+				        	65.652545]
+
+				        }; 
+        $scope.data = someData; 
+    	}
+
+			
+		</script>
+	</head> 
+	<body ng-repeat="gigabytes in data.monthlyUsage | limitTo:5">
+		<p>
+			<strong>2 first parameters of GB's: {{gigabytes | number: 2}} </strong><br> <!-- 2 first parameters -->
+			<strong>2 last parameters of GB's: {{gigabytes | number: -2}} </strong><br> <!-- 2 last parameters -->
+
+
+		</p>
+		
+
+	</body> 
+</html> 

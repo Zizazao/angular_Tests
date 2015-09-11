@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html ng-app> 
+	<head>  
+		<title>Listing 3-4</title>  
+		<script src="js/angular.min.js"></script> 
+
+		<script>
+
+			function myfirstCtrl($scope){
+				var employees =['Paco Montanez', 'Carlos Perez', 'Jennifer Grant'];
+				$scope.ourEmployees = employees;
+			}
+		</script>
+	</head> 
+	<body ng-controller="myfirstCtrl">
+
+		<h3>Number of employees: {{ourEmployees.length}} </h3>  
+		<p ng-repeat="employee in ourEmployees">{{employee}} </p> <!--foreach() look-alike -->
+
+	</body> 
+</html> 

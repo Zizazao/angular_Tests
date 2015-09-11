@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Primer</title>
+	</head>
+    <body>
+        <!-- an inline script -->
+        <script>
+        function tripler (numberToTriple){
+        	return 3 * numberToTriple;
+        }
+        console.log(tripler(150));
+        console.log(tripler(350));
+        
+        var color, whereItIs, whatItIs;
+
+        whereItIs = "body";
+        whatItIs = "liquid";
+        color = "red";
+        console.log("the color of the blood is " + color + ", it resides on the " + whereItIs + " and is a " + whatItIs);
+
+
+        var stringType = 54;
+
+        console.log(typeof stringType);
+
+        var myFirstObject = {};
+
+        myFirstObject.firstName = "paco";
+        myFirstObject.lastName = "Montañez";
+        console.log(myFirstObject.firstName + myFirstObject.lastName);
+
+        var testMethodObject = {
+        	firstName: 'Paco',
+        	lastName: 'Montanez',
+        	age: 23,
+
+        	info: function (){
+        		console.log(this.firstName + " " + this.lastName);
+        	}
+        };
+
+        testMethodObject.info();
+        
+        for(var nombreCompleto in testMethodObject){
+        	console.log(testMethodObject[nombreCompleto]);
+        }
+
+        
+
+        </script>
+
+
+    </body>
+</html>

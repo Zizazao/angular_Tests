@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html ng-app> 
+	<head>  
+		<title>Listing 3-3</title>  
+		<script src="js/angular.min.js"></script> 
+
+		<script>
+
+			function myfirstCtrl($scope){
+				var employees =['Paco Montanez', 'Carlos Perez', 'Jennifer Grant'];
+				$scope.ourEmployees = employees;
+			}
+		</script>
+	</head> 
+	<body ng-controller="myfirstCtrl">
+
+		<h3>Number of employees: {{ourEmployees.length}} </h3>  
+
+	</body> 
+</html> 
